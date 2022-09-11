@@ -201,3 +201,123 @@ else{
 }*/
 
 
+//----------------Arrays------------------
+
+/*let frutas = ["banana" ,"manzana" ,"pera",5,9,"pedro"];
+
+document.write(frutas[5]);*/
+
+//--------------Arrays asociativos---------------
+
+/*let pc1 = {
+	nombre: "daltopc",
+	procesador: "Intel Core I7",
+	ram: "16GB",
+	espacio: "1TB"
+};
+
+pc2 = ["daltopc", "Intel Core I7", "16GB", "1TB"];
+
+let nombre = pc1["nombre"];
+let procesador = pc1["procesador"];
+let ram = pc1["ram"];
+let espacio = pc1["espacio"];
+
+frase = `el nomre de mi pc es: <b>${nombre} </b><br>
+		 el procesador es: <b>${procesador} </b><br>
+		 la memoria ram es: <b>${ram}</b> <br>
+		 el espacio en disco es de: <b>${espacio}</b> <br>`;
+
+document.write(frase);*/
+
+
+//------------Bucles e Iteracion--------------------
+// while
+let numeroParaSumar = 0;
+/*
+while (numeroParaSumar < 10) {
+	numeroParaSumar++;
+	document.write(numeroParaSumar + "<br>");
+}*/
+
+
+//do while
+/*do {
+	document.write(numeroParaSumar + "<br>");
+	numeroParaSumar++;
+	
+	
+}
+
+while(numeroParaSumar <= 6)*/
+
+// break
+
+/*while(numeroParaSumar < 1000){
+	numeroParaSumar++;
+	document.write(numeroParaSumar)
+	if (numeroParaSumar == 10) {
+		break;
+	}
+	
+	
+}
+
+document.write(" FIN")*/
+
+
+//for (inicilizacion, condicion, aumento o decremento)
+/*for (let i = 0; i < 6; i++){
+	document.write(i + "<br>");
+}*/
+
+// continue
+
+/*for (let i=1; i <= 20; i++){
+ 		if (i == 12) {
+ 			continue;
+ 		}
+ 	document.write(i + "<br>");
+}*/
+
+
+// for in - for of
+// in devuelve la posicion en la que se encuentra
+/*let animales = ["gato", "perro", "dinosaurio"];
+ //animales.edad = "20"; //opcional entra en poo
+for(animal in animales){
+	//document.write(animal + "<br>");
+	document.write(animal + "<br>"); // para mostrar los elementos
+}
+
+document.write("<br>");
+// of muestra los elementos 
+for(animal of animales){
+	document.write(animal + "<br>");
+}
+
+//document.write(animales.edad); // opcional de poo*/
+
+
+// label
+/*array1 = ["maria","josefa", "roberta"];
+array2 = ["pedro", "marcelo", array1, "josefina"];
+
+
+forRancio: 
+for(let array in array2){
+	if(array == 2){
+
+		for(let array of array1) {
+			if(array == "maria"){
+				//continue forRancio // para romper el array y no recorrerlo;
+			}
+			document.write(array + "<br>");
+
+		}
+
+	} else{
+		document.write(array2[array]+ "<br>");
+	}
+
+}*/
