@@ -100,8 +100,104 @@ document.write(numero); */
 
 
 //---------------concatencion-------------
-//minuto del video 1:03:18
+//ejemplo 1
+/*saludo = "¡hola pedro!";
+pregunta = " ¿como estas?";
+
+frase = saludo + pregunta;
+
+document.write(frase);*/
+
+//ejemplo 2
+/*numero1 = 53;
+numero2 = 8;
+frase = "" + numero1 + numero2;
+document.write(frase);*/
+
+//funcion concat es un metodo de cadena si o si tiene que tener un string
+//ejemplo 3
+/*numero1 = "5";
+numero2 = 8;
+frase = numero1.concat(numero2);
+document.write(frase);*/
+
+//ejemplo 4
+/*nombre = "juan esteban yepes";
+//frase = "soy " + nombre + " y estoy caminando"
+frase = `soy ${nombre} 
+y estoy caminando`;  //`` para sacar esos signos ctrl + alt + }
+document.write(frase);*/
+
+//ejemplo 5
+/*nombre = "juan esteban";
+//frase = "mi nomre es 'juanes' y soy un crack"; // escape de comillas simple
+frase = 'mi nomre es "juanes" y soy un crack'; // escape de comillas dobles
+document.write(frase);*/
+
+//------------operadores de comparacion-------------
+// por lo general devuelven un booleano true o false
+/*let numero = 23;
+let numero2 = 2;
+let texto = "23";
+let texto1 = "texto 2";
+// igualdadd
+//document.write(numero == numero2);
+
+//inegualdad (distintos)
+//document.write(texto != texto1);
+
+//identidad (para ver si el mismo tipo de dato)
+//document.write(texto === numero);
+
+//no identidad
+//document.write(texto !== numero);
+
+//mayor, mayorIgual, menor, menorIgual
+document.write(numero > numero2);
+document.write(numero >= numero2);
+document.write(numero < numero2);
+document.write(numero <= numero2);*/
 
 
+//-----------------operadores logicos--------------
+//ejemplo1
+/*let valor = true;
+let valor2 = true;
+
+let resultado = valor && valor2;
+let resultado2 = valor || valor2;
+let resultado3 = !valor;
+
+document.write(resultado);
+document.write(resultado2);
+document.write(resultado3);*/
+
+//ejemplo2
+/*num1 = 12;
+num2 = 24;
+afirmacion1 = num1 < num2 ;
+afirmacion2 = num1 == num2;
+document.write(!afirmacion2);*/
+
+//-----------camel case-------------------
+// holaComoEstas
+// document.getElementById();
+// decimeAlgunaCosa
+
+
+//------------------Condicionales--------------
+/*
+nombre = "juanes"
+if (nombre == "lucas") {
+	alert("tu nombre es malardo");
+}
+
+else if (nombre == "pedro") {
+	alert("tu nombre es buenardo");
+} 
+
+else{
+	alert("tu nombre es otro");
+}*/
 
 
