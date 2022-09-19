@@ -233,7 +233,7 @@ document.write(frase);*/
 
 //------------Bucles e Iteracion--------------------
 // while
-let numeroParaSumar = 0;
+//let numeroParaSumar = 0;
 /*
 while (numeroParaSumar < 10) {
 	numeroParaSumar++;
@@ -322,4 +322,230 @@ for(let array in array2){
 
 }*/
 
-//comentario
+//-------------Funciones-------------------
+//ejemplo 1
+/*function saludar(){
+
+	respuesta = prompt("¡hola juanes! ¿como fue tu dia?")
+
+if(respuesta == "bien"){
+	alert("me alegro");
+}else{
+	alert("una pena");
+}
+
+}
+
+saludar();
+saludar();*/
+
+//-------funcion con return----------
+//ejemplo 2
+
+/*function saludar() {
+	alert("hola");
+	return 3;
+}
+
+let saludo = saludar();
+
+document.write(saludo);*/
+
+//-----------parametros--------------
+//ejemplo 1
+/*function suma(num1, num2) {
+	let res = num1 + num2;
+	document.write(res);
+	document.write("<br>");
+}
+
+suma(12,32);
+suma(22,55);*/
+
+//ejemplo2
+/*function suma(num1, num2) {
+	let res = num1 + num2;
+	return res;
+}
+
+let resultado = suma(20,25);
+
+document.write(resultado);*/
+
+//ejemplo 3
+/*function saludar(nombre) {
+	let frase = `¡hola ${nombre}! ¿como estas?`;
+	document.write(frase);
+}
+
+saludar("juanes");*/
+
+//ejemplo 4
+/*const saludar = function(nombre){
+	let frase =  `¡hola ${nombre}! ¿como estas?`;
+	document.write(frase);
+
+}
+
+saludar("juanes");*/
+
+//-----------funciones flecha----------------
+//ejemplo 1
+/*const saludar = (nombre) =>{
+	let frase =  `¡hola ${nombre}! ¿como estas?`;
+	document.write(frase);
+} 
+
+saludar("juan");*/
+
+
+//problemas a resolver
+/* A) un joven afortunado logro ganar el primer premio de la loteria
+exacto, estamos hablando del pre al que cofla le dio una mano, este 
+pobre decide hacer una fiesta para festejar que salio de la pobreza con
+este millonario compro una maquina que deja pasar solamente a los mayores
+de edad, entre otras cosas.....
+
+-dejar pasar solo a los mayores de edad
+-la primer persona que entre despues de las 2 am, no paga
+*/
+
+
+// let free = false;
+
+/*const validarCliente = (time)=>{
+	let edad = prompt("¿cual es tu edad?");
+	if (edad >= 18) {
+		if (time >=2 && time < 7 && free == false) {
+			alert("podes pasar gratis, sos la primera persona en entrar despues de las 2am");
+			free = true;
+		}else{
+			alert(`son las ${time}:00Hs y podes pasar, pero tenes que pagar la entrada`);
+		}
+	}else{
+		alert("mira papu, sos menor de edad por ende no vas a pasar, MAQUINA");
+	}
+}
+
+validarCliente(23);
+validarCliente(24);
+validarCliente(0.2);
+validarCliente(0.6);
+validarCliente(1);
+validarCliente(2);
+validarCliente(2.4);
+validarCliente(3);*/
+
+//problema2
+/*
+B)cofla vuelve de la comisaria exausto y por lo cansado que estaba se fue
+a dormir.. al otro dia comienzan las clases del ciclo basico de la universidad
+(porque cofla quiere ser programador y se inscriio en la facultad de
+ingenieria para estudiar desarrollo de software).
+En su curso en total son 19 alumnos, pero surio un problema que complico un
+poco a la facultad; se rompio el sistema de registro de asistencias y durante
+los proximos 30 dias no se podran hacer registros de datos de ningun tipo, por
+ende las clases no podran comenzar hasta que esto este solucionado.
+
+-crear mini-sistema que nos permita registrar los alumnos que estan presentes(P)
+y ausentes (A) en clase.
+-pasados los 30 dias mostrar la situacion final de todos los alumnos (Nro total presentes y ausentes)
+-se puede tener maximo de 10% de ausencias por semestre, si se tiene mas aclarar que esta reprobado.
+*/
+
+/*let cantidad = prompt("¿cuantos alumnos son?");
+let alumnosTotales = [];
+
+for(i =0; i < cantidad; i++){
+	alumnosTotales[i] = [prompt("¿nombre del alumno" + (i+1)), 0]; // el 0 es numero de asistencias
+
+}
+
+const tomarAsistencia = (nombre,p)=>{
+	let presencia = prompt(nombre);
+	if(presencia == "p" || presencia =="P"){
+		alumnosTotales[p][1]++;
+	}
+}
+
+for(i =0; i < 30; i++){
+	for (alumnos in alumnosTotales){
+		tomarAsistencia(alumnosTotales[alumnos][0], alumnos)
+	}
+}
+
+for(alumnos in alumnosTotales){
+	let resultado = `${alumnosTotales[alumnos][0]}:<br>
+	_________Presentes: <b>${alumnosTotales[alumnos][1]}<b> <br>
+	_________Ausencias: <b>${ 30 - parseInt(alumnosTotales[alumnos][1])}<b>
+	`;
+	if( 30 - alumnosTotales[alumnos][1] > 18){
+		resultado += "<b style= 'color:red'> REPROBADO POR INASISTENCIAS</b><br><br>";
+	}else{
+		resultado+= "<br><br>";
+	}
+
+	document.write(resultado);
+}*/
+
+
+//ejercicio 3 
+//calculadora
+/*
+const sumar = (num1,num2) =>{
+	return parseInt(num1) + parseInt(num2);
+}
+
+const restar = (num1,num2) =>{
+	return parseInt(num1) - parseInt(num2);
+}
+
+const dividir = (num1,num2) =>{
+	return parseInt(num1) / parseInt(num2);
+}
+
+const multiplicar = (num1,num2) =>{
+	return parseInt(num1) * parseInt(num2);
+}
+
+
+alert("¿que operacion deseas realizar?");
+operacion = prompt("1:suma, 2:resta, 3: division, 4:multiplicacion");
+
+if (operacion == 1){
+	let numero1 = prompt("primer numero para sumar");
+	let numero2 = prompt("segundo numero para sumar");
+	resultado = sumar(numero1,numero2);
+	alert(`tu resultado es: ${resultado}`);
+}
+
+else if (operacion == 2){
+	let numero1 = prompt("primer numero para restar");
+	let numero2 = prompt("segundo numero para restar");
+	resultado = restar(numero1,numero2);
+	alert(`tu resultado es: ${resultado}`);
+}
+
+else if (operacion == 3){
+	let numero1 = prompt("primer numero para dividir");
+	let numero2 = prompt("segundo numero para dividir");
+	resultado = dividir(numero1,numero2);
+	alert(`tu resultado es: ${resultado}`);
+}
+
+else if (operacion == 4){
+	let numero1 = prompt("primer numero para multiplicar");
+	let numero2 = prompt("segundo numero para multiplicar");
+	resultado = multiplicar(numero1,numero2);
+	alert(`tu resultado es: ${resultado}`);
+}
+
+else{
+	alert("no se ha encontrado la operacion");
+}*/
+
+//---------------POO(programacion orientada a objetos-------)
+
+
+
+
