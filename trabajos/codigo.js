@@ -546,6 +546,390 @@ else{
 
 //---------------POO(programacion orientada a objetos-------)
 
+// conceptos basicos de POO
+// clase, objeto, atributo, metodo, constructor, instanciacion
+/*class animal {
+	constructor(especie,edad,color){
+		this.especie = especie;
+		this.edad = edad;
+		this.color = color;
+		this.info = `soy ${this.especie}, tengo ${this.edad} años
+		y soy de color ${this.color}`;
+	}
+
+	verInfo(){
+		document.write(this.info + "<br>")
+	}
+}
 
 
 
+let perro = new animal("perro",5,"marron");
+let gato = new animal("gato",2,"negro");
+let pajaro = new animal("pajaro",1,"verde");
+
+// document.write(perro.info + "<br>")
+// document.write(gato.info + "<br>")
+// document.write(pajaro.info + "<br>")
+
+
+perro.verInfo();
+gato.verInfo();
+pajaro.verInfo();*/
+
+//caracteristicas de la POO
+//abstaccion, modularidad, encapsulamiento, polimorfismo
+
+/*class Animal {
+	constructor(especie,edad,color){
+		this.especie = especie;
+		this.edad = edad;
+		this.color = color;
+		this.info = `soy ${this.especie}, tengo ${this.edad} años
+		y soy de color ${this.color}`;
+	}
+
+	verInfo(){
+		document.write(this.info + "<br>")
+	}
+	
+}
+
+class Perro extends Animal{
+	constructor(especie,edad,color,raza){
+		super(especie,edad,color);
+		this.raza = raza
+	}
+	ladrar(){
+		alert("¡Waw!");
+	}
+}
+
+
+let perro = new Perro("perro",5,"marron", "doberman");
+let gato = new Animal("gato",2,"negro");
+let pajaro = new Animal("pajaro",1,"verde");
+
+perro.ladrar();
+gato.verInfo();
+pajaro.verInfo();*/
+
+//metodos estaticos - metodos acesores
+
+/*class Animal {
+	constructor(especie,edad,color){
+		this.especie = especie;
+		this.edad = edad;
+		this.color = color;
+		this.info = `soy ${this.especie}, tengo ${this.edad} años
+		y soy de color ${this.color}`;
+	}
+
+	verInfo(){
+		document.write(this.info + "<br>")
+	}
+	
+}
+
+class Perro extends Animal{
+	constructor(especie,edad,color,raza){
+		super(especie,edad,color);
+		this.raza = null;
+	}
+	set setRaza(newName){
+		this.raza = newName
+	}
+
+	get getRaza(){
+		return this.raza;
+	}
+	
+}
+
+
+const perro = new Perro("perro",5,"marron", "doberman");
+const gato = new Animal("gato",2,"negro");
+const pajaro = new Animal("pajaro",1,"verde");
+
+perro.setRaza = "pedro";
+document.write(perro.getRaza)*/
+
+//ejercicio de POO
+/*Problema A
+confla entro a una tienda que vende celulares porque le parecio bastante bueno comprarse un nuevo celular
+de todos los modelos que hay disponibles en esa tienda, a cofla le llamaron la atencion 3 telefonos especificamente
+el problema es que ningun vendedor sabe nada al respecto entonces no pueden recomendarle absolutamente nada... pero claro:
+el antes de comprar esos celulares quiere ver las cualidades y comportamientos de cada uno para poder comprarlos,
+ahi entramos nosotros
+
+CREAR SOLUCIONES
+-crear un sistema para mostrarle a cofla las particularidades de los 3 celulares.
+-cada celular debe tener color, peso, resolucion de pantalla, resolucion de camara y memoria ram
+-cada celular debe poder prender, reiniciar, apagar, tomar fotos y grabar
+*/
+
+/*class Celular{
+	constructor(color,peso,rdp,rdc,ram){
+		this.color = color;
+		this.peso = peso;
+		this.resolucionPantalla = rdp;
+		this.resolucionDeCamara = rdc;
+		this.memoriaRam = ram;
+		this.encendido = false;
+	}
+	//una opcion de prender y apagar
+	/*prender(){
+		if(this.encendido == false){
+			alert("prendiendo");
+			encendido = true;
+		}else{
+			alert("el celular ya esta encendido")
+		}
+	}
+
+	apagar(){
+		if(this.encendido == true){
+			alert("celular apado");
+			encendido = false;
+		}else{
+			alert("el celular ya esta apagado")
+		}
+	}*/
+
+	//los dos en una sola funcion
+	/*presionarBotonEncendido(){
+		if(this.encendido == false){
+			this.encendido = true
+			alert("celular prendido");
+		}else{
+			alert("celular apagado")
+			this.encendido = false
+		}
+	}
+
+	reiniciar(){
+		if(this.encendido == true){
+			alert("reiniciando celular");
+		}else{
+			alert("el celular esta apagado")
+		}
+	}
+
+	tomarFotos(){
+		alert(`foto tomada en una resolucion de: ${this.resolucionDeCamara}`);
+	}
+
+	grabarVideo(){
+		alert(`grabando video en ${this.resolucionDeCamara}`)
+	}
+
+	mobileInfo(){
+		return `
+		Color: <b>${this.color}</b></br>
+		peso: <b>${this.peso}</b></br>
+		tamaño: <b>${this.resolucionPantalla}</b></br>
+		Resolucion de camara: <b>${this.resolucionDeCamara}</b></br>
+		Resolucion de video: <b>${this.resolucionDeCamara}</b></br>
+		Memoria Ram: <b>${this.memoriaRam}</b></br>`
+	}
+}
+
+celular1 = new Celular("rojo","150g",5,"HD", "1GB");
+celular2 = new Celular("negro","155g",5.4,"full HD", "2GB");
+celular3 = new Celular("blanco","146g",5.9,"full HD", "2GB");
+
+document.write(`
+	${celular1.mobileInfo()} </br>
+	${celular2.mobileInfo()} </br>
+	${celular3.mobileInfo()} </br>`)
+// celular1.presionarBotonEncendido();
+// celular1.tomarFotos();
+// celular1.grabarVideo();
+// celular1.reiniciar();
+// celular1.presionarBotonEncendido();*/
+
+//problema B
+/* confla no esta satisfecho con los celulares asi que decide ir a la seccion de celulares de alta gama, donde va a poder
+encontrar los celularesmas caros del lugar, asi que al entrar io dos celulares que le encantaron, estos 2 celulares de alta
+gama pueden hacer todo lo que podian hacer los 3 anteriores pero tienen mejores caracteristicas y ademas pueden grabar en
+camara super lenta, tiene reconcimiento facial y una camara extra.
+
+CREAR SOLUCIONES
+
+-implementar todas estas cualidades en los celulares de alta gama
+*/
+
+/*class Celular{
+	constructor(color,peso,rdp,rdc,ram){
+		this.color = color;
+		this.peso = peso;
+		this.resolucionPantalla = rdp;
+		this.resolucionDeCamara = rdc;
+		this.memoriaRam = ram;
+		this.encendido = false;
+	}
+	
+
+	//los dos en una sola funcion
+	presionarBotonEncendido(){
+		if(this.encendido == false){
+			this.encendido = true
+			alert("celular prendido");
+		}else{
+			alert("celular apagado")
+			this.encendido = false
+		}
+	}
+
+	reiniciar(){
+		if(this.encendido == true){
+			alert("reiniciando celular");
+		}else{
+			alert("el celular esta apagado")
+		}
+	}
+
+	tomarFotos(){
+		alert(`foto tomada en una resolucion de: ${this.resolucionDeCamara}`);
+	}
+
+	grabarVideo(){
+		alert(`grabando video en ${this.resolucionDeCamara}`)
+	}
+
+	mobileInfo(){
+		return `
+		Color: <b>${this.color}</b></br>
+		peso: <b>${this.peso}</b></br>
+		tamaño: <b>${this.resolucionPantalla}</b></br>
+		Resolucion de camara: <b>${this.resolucionDeCamara}</b></br>
+		Resolucion de video: <b>${this.resolucionDeCamara}</b></br>
+		Memoria Ram: <b>${this.memoriaRam}</b></br>`
+	}
+}
+
+class CelularAltaGama extends Celular{
+	constructor(color,peso,rdp,rdc,ram,rdce){
+		super(color,peso,rdp,rdc,ram);
+		this.resolucionDeCamaraExtra = rdce;
+	}
+	grabarVideoLento(){
+		alert("estas grabando en camara lenta");
+	}
+
+	reconocimientoFacial(){
+		alert("vamos a iniciar un reconocimiento facial");
+	}
+	infoAltaGama(){
+		return this.mobileInfo() + `resolucion de camara extra: ${this.resolucionDeCamaraExtra}`;
+	}
+}
+
+celular1 =  new CelularAltaGama("rojo","130g", "5.2", "4K", "3GB", "FULL HD");
+celular2 = new CelularAltaGama("rojo","142g", "6", "4K", "4GB", "HD");
+// celular1 = new Celular("rojo","150g",5,"HD", "1GB");
+// celular2 = new Celular("negro","155g",5.4,"full HD", "2GB");
+// celular3 = new Celular("blanco","146g",5.9,"full HD", "2GB");
+
+document.write(`
+	${celular1.infoAltaGama()} </br></br>
+	${celular2.infoAltaGama()} </br>`)
+// celular1.presionarBotonEncendido();
+// celular1.tomarFotos();
+// celular1.grabarVideo();
+// celular1.reiniciar();
+// celular1.presionarBotonEncendido();*/
+
+//problema C
+/*
+cofla ya tiene su nuevo celular y ahora esta mirando las aplicaciones del play store ya que quiere juar juegos que sean
+muy populares, que tengan buena puntuacion y que pesen poco, pero las 7 apps que llamaron su atencion son un tanto similares
+y sabe que si se descarga todas, probablemente juegue con todas, pero el se va a descargar solo 2 para tener perdidas
+innecesarias de tiempo jugando juegos de su celular, pero el problema viene cuando no uede decidirse cual de todas estas
+aplicaciones es la que va a descargar.
+
+CREAR SOLUCIONES
+
+-crear un sistema que ayude a cofla a decidir cual app descargar
+-la informacion de los instaladores debe contener la cantidad de descargas y la puntuacion y el peso
+-las Apps se deben poder instalar, abrir, cerrar y desinstalar.
+*/
+
+/*class App{
+	constructor(descargas,puntuacion,peso){
+		this.descargas = descargas;
+		this.puntuacion = puntuacion;
+		this.peso = peso;
+		this.iniciada = false;
+		this.instalada = false;
+	}
+
+	abrir(){
+		if(this.iniciada == false && this.instalada == true){
+			this.iniciada = true;
+		alert("app encendida");
+		}
+	}
+
+	cerrar(){
+		if(this.iniciada == true && this.instalada == true){
+			this.iniciada = false;
+		alert("app cerrada");
+		}
+	}
+
+	instalar(){
+		if(this.instalada == false){
+			this.instalada = true;
+		alert("app instalada");
+		}
+	}
+
+	desinstalar(){
+		if(this.instalada == true){
+			this.instalada = false;
+		alert("app desinstalada correctamente");
+		}
+	}
+
+	appInfo(){
+		return `
+		Descargas: <b>${this.descargas}</b></br>
+		Puntuacion: <b>${this.puntuacion}</b></br>
+		Peso: <b>${this.peso}</b></br>`
+	}
+
+}
+
+app = new App("16.000", "5 estrellas", "900mb");
+app2 = new App("1.000", "4 estrellas", "400mb");
+app3 = new App("6.000", "4.5 estrellas", "100mb");
+app4 = new App("23.000", "4.8 estrellas", "1gb");
+app5 = new App("900", "5 estrellas", "250mb");
+app6 = new App("17", "3.7 estrellas", "522mb");
+app7 = new App("42.981", "2.9 estrellas", "723mb");
+
+
+
+document.write(`
+	${app.appInfo()} </br>
+	${app2.appInfo()} </br>
+	${app3.appInfo()} </br>
+	${app4.appInfo()} </br>
+	${app5.appInfo()} </br>
+	${app6.appInfo()} </br>
+	${app7.appInfo()} </br>
+	`)
+// app.appInfo();
+// app2.appInfo();
+// app3.appInfo();
+// app4.appInfo();
+// app5.appInfo();
+// app6.appInfo();
+// app7.appInfo();
+// app.instalar();
+// app.abrir();
+// app.cerrar();
+// app.desinstalar();*/
+
+//voy en la hora 5:10:07
