@@ -932,4 +932,204 @@ document.write(`
 // app.cerrar();
 // app.desinstalar();*/
 
-//voy en la hora 5:10:07
+//----------------Metodos de cadena----------------
+// concat es para concatener otras cadenas
+/*let cadena = "cadena de prueba";
+let cadena2 = " cadena 2"
+resultado = cadena.concat(cadena2);
+
+document.write(resultado);*/
+
+//verifica que una cadena empieza con la otra
+/*let cadena = "cadena de prueba";
+let cadena2 = "cadena"
+resultado = cadena.startsWith(cadena2);
+
+document.write(resultado);*/
+
+
+//verifica que una cadena termine con la otra
+/*let cadena = "cadena de prueba";
+let cadena2 = "prueba"
+resultado = cadena.endsWith(cadena2);
+
+document.write(resultado);*/
+
+//verifica que cualquier oracion se identica a la otra cadena
+/*let cadena = "cadena de prueba";
+let cadena2 = "de"
+resultado = cadena.includes(cadena2);
+
+document.write(resultado);*/
+
+
+//nos da la posicion de la palabra (tira un numero)
+/*let cadena = "cadena de prueba";
+let cadena2 = "prueba"
+resultado = cadena.indexOf(cadena2);
+
+document.write(resultado);*/
+
+
+//encuentra la posicion de atras para adelante
+/*let cadena = "cadena de prueba tarado tarado tarado";
+let cadena2 = "tarado"
+resultado = cadena.lastIndexOf(cadena2);
+
+document.write(resultado);*/
+
+
+//rellena la cadena con una nueva cadena al principio
+/*let cadena = "abc";
+let cadena2 = ""
+resultado = cadena.padStart(10,"12");
+
+document.write(resultado);*/
+
+//rellena la cedena con una nueva cadena al final
+/*let cadena = "cadena";
+let cadena2 = ""
+resultado = cadena.padEnd(10, "1");
+
+document.write(resultado);*/
+
+
+//para repetir las cadenas varias veces
+/*let cadena = "123 ";
+let cadena2 = ""
+resultado = cadena.repeat(10);
+
+document.write(resultado);*/
+
+
+//divide la cadena como le pedimos
+/*let cadena = "hola como estas";
+//let cadena2 = " cadena 2"
+resultado = cadena.split(" ");
+
+document.write(resultado[0]);*/
+
+
+//nos retorna un pedazo de la oracion de la cadena
+/*let cadena = "ABCDEFG";
+resultado = cadena.substring(0,2);
+
+document.write(resultado);*/
+
+//convierte la cadena en minuscula
+/*let cadena = "ABCDEFG";
+resultado = cadena.toLowerCase();
+document.write(resultado);*/
+
+
+//conviernte la cadena en mayuscula
+/*let cadena = "cadena de prueba";
+resultado = cadena.toUpperCase();
+
+document.write(resultado);*/
+
+//devuelve una cadena conertida a string
+/*let cadena = 50;
+let resultado = cadena.toString();
+
+document.write(2 * resultado);*/
+
+//elimina los espacios en blanco al comienzo de una cadena
+/*let cadena = "   pedro   ";
+//let resultado = cadena.trim();
+//let resultado = cadena.trimStart();
+//let resultado = cadena.trimEnd();
+document.write(resultado.length);*/
+
+
+//--------------metodos de Arrays (transformadores)------------
+
+//elimina el ultimo elemento de un array y lo devuelve
+/*let nombre = ["pedro", "maria", "jorge"];
+document.write(nombre + "</br>");
+let resultado = nombre.pop()
+document.write(resultado + "</br>");
+document.write(nombre);*/
+
+
+//elimina el primer elemento de un array y lo devuelve
+/*let nombre = ["pedro", "maria", "jorge"];
+document.write(nombre + "</br>");
+let resultado = nombre.shift()
+document.write(resultado + "</br>");
+document.write(nombre);*/
+
+//agrega un nuevo elemento a un array al final
+/*let nombre = ["pedro", "maria", "jorge"];
+document.write(nombre + "</br>");
+let resultado = nombre.push("juancito")
+document.write(nombre);*/
+
+
+//invierte el orden de una array
+/*let nombre = ["pedro", "maria", "jorge"];
+document.write(nombre + "</br>");
+let resultado = nombre.reverse()
+document.write(resultado + "</br>");
+document.write(nombre);*/
+
+
+//agrega datos en un array al principio
+/*let numero = [1,2,3,4];
+document.write(numero + "</br>");
+let resultado = numero.unshift(0)
+document.write(resultado + "</br>");
+document.write(numero);*/
+
+
+//ordena los elementos de un array localmente y devuelve el array ordenado
+/*let numero = ["abecedario", "manzana", "pedro", "dedo", "bobo"];
+document.write(numero + "</br>");
+let resultado = numero.sort()
+document.write(resultado + "</br>");
+document.write(numero);*/
+
+
+// cambia el contenido de un array eliminando elementos existentes y/o aregando nuevos elementos
+/*let numero = ["abecedario", "manzana", "pedro", "dedo", "bobo"];
+document.write(numero + "</br>");
+let resultado = numero.splice(0,1, "roberto", "gustavo", "maximo")
+document.write(resultado + "</br>");
+document.write(numero);*/
+
+
+//--------metodos arrays (accesores)------------
+
+//une todos los elementos de una matriz en una cadena y la devuelve
+/*let numeros = ["abecedario", "manzana", "pedro", "dedo", "bobo"];
+document.write(numeros + "</br>");
+let resultado = numeros.join("<br>elemento: ") //convierte en cadena de texto
+document.write("elemento: " + resultado)*/
+
+
+//devuelve una parte del array dentro de un nuevo array empezando por inicio hasta fin
+/*let numeros = ["abecedario", "manzana", "pedro", "dedo", "bobo"];
+document.write(numeros + "</br>");
+let resultado = numeros.slice(0,-2)
+document.write(resultado)*/
+
+//funcion filter y forEach funcionan igual
+/*let numeros = ["abecedario", "manzana", "pedro", "dedo", "bobo"];
+let resultado = numeros.filter(numero => numero.length > 5)
+document.write(resultado)*/
+
+
+//----------objeto math - basico-------
+
+//numero = Math.sqrt(25) // raiz cuadrada;
+//numero = Math.cbrt(27); // raiz cubica
+//numero = Math.max(4,1,12,63,243,90); // numero maximo
+//numero = Math.min(4,1,12,63,243,90); // numero minimo
+//numero = Math.random(); // numero aleatoria entre 0 y 1
+//numero = Math.random()*100 // numero aleatorio entre 0 y 100;
+ /*let numero = Math.random()*100
+numero = Math.round(numero);*/
+/*let numero = Math.fround(9.8)
+document.write(numero);*/
+
+//video 6:21:24
