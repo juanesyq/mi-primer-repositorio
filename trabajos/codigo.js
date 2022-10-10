@@ -1133,3 +1133,259 @@ numero = Math.round(numero);*/
 document.write(numero);*/
 
 //video 6:21:24
+
+//EJERCICIOS
+
+/*
+Cofla ya esta terminando el primer semestre del primer ciclo, la tarea que le debe realizar es mucho mas
+avanzada de la que tenia antes, ademas de suma, resta, multiplicacion y division
+
+CREAR SOLUCIONES
+
+-Perfeccionar calculadora para poder implementar las nuevas funciones
+*/
+
+/*class Calculadora{
+	constructor(){
+
+	}
+	sumar(num1,num2){
+	return parseInt(num1) + parseInt(num2);
+}
+
+	restar(num1,num2){
+	return parseInt(num1) - parseInt(num2);
+}
+
+	dividir(num1,num2){
+	return parseInt(num1) / parseInt(num2);
+}
+
+	multiplicar(num1,num2){
+	return parseInt(num1) * parseInt(num2);
+}
+	potenciar(num,exp){
+		let numero = num;
+		for (var i = 1; i < exp; i++) {
+			numero = numero * num;
+		}
+		return numero;
+	}
+	raizCuadrada(num){
+		return Math.sqrt(num)
+	}
+	raizCubica(num){
+		return Math.cbrt(num);
+	}
+}
+
+const calculadora = new Calculadora();
+
+
+alert("¿que operacion deseas realizar?");
+operacion = prompt("1:suma, 2:resta, 3: division, 4:multiplicacion, 5:potenciacion, 6:raizCuadrada, 7:raizCubica");
+
+if (operacion == 1){
+	let numero1 = prompt("primer numero para sumar");
+	let numero2 = prompt("segundo numero para sumar");
+	resultado = calculadora.sumar(numero1,numero2);
+	alert(`tu resultado es: ${resultado}`);
+}
+
+else if (operacion == 2){
+	let numero1 = prompt("primer numero para restar");
+	let numero2 = prompt("segundo numero para restar");
+	resultado = calculadora.restar(numero1,numero2);
+	alert(`tu resultado es: ${resultado}`);
+}
+
+else if (operacion == 3){
+	let numero1 = prompt("primer numero para dividir");
+	let numero2 = prompt("segundo numero para dividir");
+	resultado = calculadora.dividir(numero1,numero2);
+	alert(`tu resultado es: ${resultado}`);
+}
+
+else if (operacion == 4){
+	let numero1 = prompt("primer numero para multiplicar");
+	let numero2 = prompt("segundo numero para multiplicar");
+	resultado = calculadora.multiplicar(numero1,numero2);
+	alert(`tu resultado es: ${resultado}`);
+}
+
+else if (operacion == 5){
+	let numero1 = prompt("numero a expotencial");
+	let numero2 = prompt("expontencial");
+	resultado = calculadora.potenciar(numero1,numero2);
+	alert(`tu resultado es: ${resultado}`);
+}
+else if (operacion == 6){
+	let numero1 = prompt("conocer la raiz cuadrada de:");
+	resultado = calculadora.raizCuadrada(numero1);
+	alert(`tu resultado es: ${resultado}`);
+}
+else if (operacion == 7){
+	let numero1 = prompt("conocer la raiz cubica de:");
+	resultado = calculadora.raizCubica(numero1);
+	alert(`tu resultado es: ${resultado}`);
+}
+
+else{
+	alert("no se ha encontrado la operacion");
+}/*
+
+/* B) la facultad de cofla esta por comenzar y ya las 12 materias de la carrera tiene asinado un profesor y todos
+los alumnos que se anotaron en dichas clases, pero  necesitamos ver esto, mas ordenadamente
+
+CREAR SOLUCIONES:
+
+-crear una funcion que al pasarle como parametro la materia nos devuelva:
+
+		*profesor asignado
+		*el nombre de todos los alumnos
+
+-crear funcion que nos diga en cuantas clases esta cofla.
+-nombra las clases en las que esta y los profesores de casa una.
+*/
+
+
+/*const obtenerInformacion = (materia)=>{
+	 materias = {
+	 	fisica:["perez","perdo", "pepito", "cofla", "maria"],
+	 	programacion:["rodriguez","perdo", "juan", "pepito"],
+	 	logica:["hernandez","perdo", "juan", "pepito", "cofla", "maria"],
+	 	quimica:["yepes","perdo", "juan", "pepito", "cofla", "maria"]
+	 }
+	 if (materias[materia] !== undefined) {
+	 	return [materias[materia], materia, materias];
+	 }else{
+	 	return materias
+	 }
+}
+
+const mostrarInformacion = (materia)=>{
+
+	let informacion = obtenerInformacion(materia);
+
+	if(informacion !== false){
+		let profesor = obtenerInformacion(materia)[0][0];
+		let alumnos = obtenerInformacion(materia)[0]
+		alumnos.shift();
+		document.write(`el profesor de  <b>${informacion[1]}</b> es: <b style="color:red">${profesor}</b><br>
+			Los alumnos son: <b style="color:blue"> ${alumnos}</b><br><br>
+			`);
+	}
+
+}
+
+
+const cantidadDeClases = (alumno)=>{
+	let informacion = obtenerInformacion();
+	let clasesPresentes = [];
+	let cantidadTotal = 0;
+	for (info in informacion) {
+		if(informacion[info].includes(alumno)) {
+			cantidadTotal++;
+			clasesPresentes.push(" " + info);
+		}
+	}
+	return `<b style="color:blue"> ${alumno}</b> esta en: <b>${cantidadTotal} clases <b style="color:green">${clasesPresentes}</b><br>`;
+}
+
+mostrarInformacion("fisica");
+mostrarInformacion("programacion");
+mostrarInformacion("logica");
+mostrarInformacion("quimica");
+
+document.write(cantidadDeClases("perdo"))
+document.write(cantidadDeClases("cofla"))
+*/
+
+/* C) cofla ya vio las 12 materias y se decidio en cual se va a inscribir asi que en tres dias lo hara,
+el problema es que se rompio el sistema de inscripciones.
+
+CREAR SOLUCIONES
+
+-crear una funcion para preuntarle a cofla en que materia se quiere inscribir.
+-si ya hay 20 alumnos anotados en la materia negarle la inscripcion.
+- si hay menos de 20 alumnos inscribir a cofla y añadirlo a la lista de alumnos
+*/
+
+ /*let materias = {
+	 	fisica:["perez","perdo", "pepito", "cofla", "maria"],
+	 	programacion:["rodriguez","perdo", "juan", "pepito"],
+	 	logica:["hernandez","perdo", "juan", "pepito", "cofla", "maria"],
+	 	quimica:["yepes","perdo", "juan", "pepito", "cofla", "maria"]
+	 }
+
+const inscribir = (alumno, materia)=>{
+	personas = materias[materia];
+	if(personas.length >= 21){
+		document.write(`lo siento <b>${alumno}</b>, las clases de <b>${materia}</b> ya estan llenas <br>`);
+	}else{ 
+		personas.push(alumno)
+		if (materia == "fisica") {
+			materias = {
+	 			fisica: personas,
+	 			programacion: materias['programacion'],
+	 			logica: materias['logica'],
+	 			quimica:materias['quimica']
+	 		}
+		}
+		else if (materias == "programacion"){
+			materias = {
+	 			fisica: materias['fisica'],
+	 			programacion: personas,
+	 			logica: materias['logica'],
+	 			quimica:materias['quimica']
+	 		}
+		}
+		else if (materias == "logica"){
+			materias = {
+	 			fisica: materias['fisica'],
+	 			programacion: materias['programacion'],
+	 			logica: personas,
+	 			quimica:materias['quimica']
+	 		}
+		}
+		else if (materias == "quimica"){
+			materias = {
+	 			fisica: materias['fisica'],
+	 			programacion: materias['programacion'],
+	 			logica: materias['logica'],
+	 			quimica: personas
+	 		}
+		}
+		document.write(`felicidades ${alumno}! te has inscrito a ${materia} correctamente <br><br>`)
+	}
+}
+
+
+document.write(materias['fisica'] + "<br>")
+inscribir("pedrito", "fisica")
+inscribir("jorge", "fisica")
+inscribir("james", "fisica")
+inscribir("pedrito", "fisica")
+inscribir("jorge", "fisica")
+inscribir("james", "fisica")
+inscribir("pedrito", "fisica")
+inscribir("jorge", "fisica")
+inscribir("james", "fisica")
+inscribir("pedrito", "fisica")
+inscribir("jorge", "fisica")
+inscribir("james", "fisica")
+inscribir("pedrito", "fisica")
+inscribir("jorge", "fisica")
+inscribir("james", "fisica")
+inscribir("pedrito", "fisica")
+inscribir("jorge", "fisica")
+
+document.write("<br>" + materias['fisica'])
+
+//video 6:57:22  */
+
+
+
+		
+
+
